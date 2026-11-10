@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学习记录 · 冯奥</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">冯奥<span class="dot">.</span></a>
+            <nav class="nav">
+                <a href="index.html">关于我</a>
+                <a href="learning.html" class="active">学习记录</a>
+                <a href="skills.html">技能展示</a>
+                <a href="projects.html">项目作品</a>
+                <a href="contact.html">联系方式</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-head">
+            <div class="container">
+                <h1>学习记录</h1>
+                <p>
+                    这里按时间倒序记录我每学一样东西的过程：学了什么、卡在哪里、怎么解决。
+                    <strong>解决了的标绿，还没解决的标黄</strong>——后者会一直留着，提醒我别忘了。
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="timeline">
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">2026 年 11 月</div>
+                        <h3>用 HTML + CSS 从零写一个个人主页 <span class="badge">已解决</span></h3>
+                        <p><strong>学了什么：</strong>HTML 的语义化标签、CSS 的盒模型、Flexbox 布局、CSS 变量。</p>
+                        <ul>
+                            <li><strong>遇到的问题：</strong>导航栏在手机上会挤成一坨，文字换行很难看。</li>
+                            <li><strong>怎么解决的：</strong>查 MDN 文档，用 <code>@media</code> 媒体查询写了 <code>@media (max-width: 760px)</code>，把导航改成换行居中。</li>
+                            <li><strong>还没解决的：</strong>吸顶导航偶尔会有一点抖动，打算这周看看是不是 body 高度的问题。</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">2026 年 10 月</div>
+                        <h3>C 语言数组：解决越界导致乱码的问题 <span class="badge">已解决</span></h3>
+                        <p><strong>学了什么：</strong>一维数组的定义、初始化、遍历，以及冒泡排序。</p>
+                        <ul>
+                            <li><strong>遇到的问题：</strong>写了个求 5 个同学平均分的程序，运行后输出总是乱码或者极大值。</li>
+                            <li><strong>怎么解决的：</strong>用 printf 一行行查，发现循环条件写成了 <code>i &lt;= 5</code>。数组长度是 5，下标从 0 到 4，越界访问到了未知内存。改成 <code>i &lt; 5</code> 就好了。</li>
+                            <li><strong>学到的教训：</strong>数组下标永远是从 0 开始的，千万别多走一步。</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">2026 年 10 月</div>
+                        <h3>第一次用 Git 和 GitHub 管理代码 <span class="badge">已解决</span></h3>
+                        <p><strong>学了什么：</strong>Git 的 init / add / commit / push 命令，以及连远程仓库。</p>
+                        <ul>
+                            <li><strong>遇到的问题：</strong>第一次 push 报错 <code>rejected — non-fast-forward</code>。</li>
+                            <li><strong>怎么解决的：</strong>问同学后明白是远程仓库里有 README，和本地冲突。用 <code>git pull --rebase</code> 先拉下来再推就好了。</li>
+                        </ul>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-date">2026 年 9 月</div>
+                        <h3>大学第一课：写下第一个 Hello World <span class="badge">已解决</span></h3>
+                        <p><strong>学了什么：</strong>程序的基本结构：头文件、main 函数、printf 输出、分号。</p>
+                        <ul>
+                            <li><strong>遇到的问题：</strong>第一次编译报错，说缺少分号。检查了三遍发现是中文分号 <code>；</code>。</li>
+                            <li><strong>学到的教训：</strong>写代码一定要用英文输入法。</li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© 2026 冯奥 · 用 HTML / CSS / JavaScript 手工搭建</span>
+            <span><a href="mailto:bxmny99@gmail.com">bxmny99@gmail.com</a></span>
+        </div>
+    </footer>
+
+</body>
+</html>

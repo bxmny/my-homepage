@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>技能展示 · 冯奥</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">冯奥<span class="dot">.</span></a>
+            <nav class="nav">
+                <a href="index.html">关于我</a>
+                <a href="learning.html">学习记录</a>
+                <a href="skills.html" class="active">技能展示</a>
+                <a href="projects.html">项目作品</a>
+                <a href="contact.html">联系方式</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-head">
+            <div class="container">
+                <h1>技能展示</h1>
+                <p>
+                    我不写「熟悉 / 了解」这种说不清的话。每项技能下面，都放一段我真正写过的代码，
+                    并且说明<strong>我用它做了什么</strong>。
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">技能概览</h2>
+                <div class="card-grid">
+
+                    <div class="skill-card">
+                        <div class="skill-head">
+                            <h3>HTML / CSS</h3>
+                            <span class="skill-level">能独立写页面</span>
+                        </div>
+                        <div class="bar"><span style="width: 70%"></span></div>
+                        <p>能用语义化标签搭页面，会用 Flexbox 布局和媒体查询适配手机。</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-head">
+                            <h3>C 语言</h3>
+                            <span class="skill-level">课程水平</span>
+                        </div>
+                        <div class="bar"><span style="width: 45%"></span></div>
+                        <p>会写循环、函数、数组，能用数组实现排序。目前正在准备学指针。</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-head">
+                            <h3>JavaScript</h3>
+                            <span class="skill-level">入门中</span>
+                        </div>
+                        <div class="bar"><span style="width: 30%"></span></div>
+                        <p>会取元素、监听表单提交，用正则做简单的校验。还没学过框架。</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">证据一：C 语言数组冒泡排序</h2>
+                <p class="section-sub">C 语言 · 课程练习</p>
+
+                <div class="skill-card">
+                    <p>
+                        <strong>我用它做了什么：</strong>老师要求写一个程序，输入 5 个人的成绩，从低到高排序输出。
+                        这是我在学完双重 for 循环后，自己写出的第一个不报错的排序代码。
+                    </p>
+
+<pre class="code">#include &lt;stdio.h&gt;
+
+int main() {
+    int scores[5] = {85, 92, 76, 60, 88};
+    int i, j, temp;
+
+    // 冒泡排序
+    for (i = 0; i &lt; 4; i++) {
+        for (j = 0; j &lt; 4 - i; j++) {
+            if (scores[j] &gt; scores[j+1]) {
+                temp = scores[j];
+                scores[j] = scores[j+1];
+                scores[j+1] = temp;
+            }
+        }
+    }
+
+    // 打印结果...
+    return 0;
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">证据二：JS 表单校验</h2>
+                <p class="section-sub">交互练习 · 用在「联系方式」页</p>
+
+                <div class="skill-card">
+                    <p>
+                        <strong>我用它做了什么：</strong>联系方式页的留言表单，点提交时会检查邮箱和内容为空，
+                        并用正则表达式判断邮箱格式。这是我第一次用 JS 做真实交互。
+                    </p>
+
+<pre class="code">form.addEventListener("submit", function (event) {
+  event.preventDefault(); // 阻止页面刷新
+
+  const email = document.querySelector("#email").value.trim();
+  const content = document.querySelector("#content").value.trim();
+  const msg   = document.querySelector("#form-msg");
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    msg.textContent = "邮箱格式看起来不太对，检查一下？";
+    msg.classList.add("show");
+    return;
+  }
+
+  msg.textContent = "已收到，谢谢你的留言！";
+  msg.classList.add("show");
+  form.reset();
+});</pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© 2026 冯奥 · 用 HTML / CSS / JavaScript 手工搭建</span>
+            <span><a href="mailto:bxmny99@gmail.com">bxmny99@gmail.com</a></span>
+        </div>
+    </footer>
+
+</body>
+</html>

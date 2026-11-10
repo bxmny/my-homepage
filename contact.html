@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>联系方式 · 冯奥</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">冯奥<span class="dot">.</span></a>
+            <nav class="nav">
+                <a href="index.html">关于我</a>
+                <a href="learning.html">学习记录</a>
+                <a href="skills.html">技能展示</a>
+                <a href="projects.html">项目作品</a>
+                <a href="contact.html" class="active">联系方式</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-head">
+            <div class="container">
+                <h1>联系方式</h1>
+                <p>
+                    欢迎交流学习经验、指出这个网站的问题，或者一起做课程项目。
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="card-grid" style="grid-template-columns: 1fr 1.4fr;">
+
+                    <!-- 左：联系方式 -->
+                    <div class="card">
+                        <h3>怎么找到我</h3>
+                        <ul class="contact-list">
+                            <li>
+                                <span class="k">邮箱</span>
+                                <span class="v">
+                                    <a href="mailto:bxmny99@gmail.com">bxmny99@gmail.com</a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="k">GitHub</span>
+                                <span class="v">
+                                    <a href="https://github.com/bxmny" target="_blank" rel="noopener">
+                                        github.com/bxmny
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="k">学校</span>
+                                <span class="v">软件工程专业 · 2026级</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 右：留言表单 -->
+                    <div class="form-card">
+                        <h3 style="margin-bottom: 6px;">给我留言</h3>
+                        <p style="color: var(--muted); font-size: 14.5px; margin-bottom: 20px;">
+                            填完点「发送」，页面会先检查格式对不对。
+                        </p>
+
+                        <form id="message-form" novalidate>
+                            <div class="field">
+                                <label for="name">你的称呼</label>
+                                <input type="text" id="name" name="name" placeholder="选填" />
+                            </div>
+
+                            <div class="field">
+                                <label for="email">你的邮箱 <span style="color: #ef4444;">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="方便我回复你" />
+                            </div>
+
+                            <div class="field">
+                                <label for="content">留言内容 <span style="color: #ef4444;">*</span></label>
+                                <textarea id="content" name="content" placeholder="想说的话写在这里……"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">发送</button>
+                            <p id="form-msg" class="form-msg" role="status"></p>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© 2026 冯奥 · 用 HTML / CSS / JavaScript 手工搭建</span>
+            <span><a href="mailto:bxmny99@gmail.com">bxmny99@gmail.com</a></span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

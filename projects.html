@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>项目作品 · 冯奥</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">冯奥<span class="dot">.</span></a>
+            <nav class="nav">
+                <a href="index.html">关于我</a>
+                <a href="learning.html">学习记录</a>
+                <a href="skills.html">技能展示</a>
+                <a href="projects.html" class="active">项目作品</a>
+                <a href="contact.html">联系方式</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-head">
+            <div class="container">
+                <h1>项目作品</h1>
+                <p>
+                    目前做过的项目不多，但每一个我都尽量写清楚四件事：
+                    <strong>解决什么问题、我负责什么、用了什么技术、最大的困难是什么</strong>。
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+
+                <!-- 项目 1 -->
+                <article class="project-card">
+                    <h2>01 · 个人成长主页（本网站）</h2>
+                    <div class="meta">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Git</span>
+                    </div>
+
+                    <h4>解决什么问题</h4>
+                    <p>
+                        学校要求做一个能长期使用的个人主页，用来记录学习过程、展示技能，
+                        以后找实习或参加竞赛时可以直接发给别人看。它不只是一次性作业，
+                        而是一个会陪我走过大学四年的空间。
+                    </p>
+
+                    <h4>我负责什么</h4>
+                    <ul>
+                        <li>全部工作由我一个人完成：从页面结构设计、配色、写 HTML/CSS，到用 JS 实现表单校验；</li>
+                        <li>自己规划了 5 个页面（关于我、学习记录、技能展示、项目作品、联系方式）和信息层级；</li>
+                        <li>用 Git 管理版本，并把代码托管到了 GitHub。</li>
+                    </ul>
+
+                    <h4>用了什么技术</h4>
+                    <ul>
+                        <li><strong>HTML5：</strong>语义化标签搭建页面结构；</li>
+                        <li><strong>CSS3：</strong>Flexbox 做布局，CSS 变量统一配色，媒体查询做手机适配；</li>
+                        <li><strong>原生 JavaScript：</strong>监听表单提交，校验邮箱格式。</li>
+                    </ul>
+
+                    <h4>最大的困难</h4>
+                    <p>
+                        最大的困难是<strong>手机端的适配</strong>。在电脑上看着很正常的导航栏，到了手机上会挤成好几行。
+                        一开始我不知道怎么办，后来查 MDN 才明白要用媒体查询。
+                        我在 CSS 里加了 <code>@media (max-width: 760px)</code>，在窄屏下把导航改成居中换行，
+                        改完之后手机上看就舒服多了。
+                    </p>
+
+                    <h4>仓库链接</h4>
+                    <p><a href="https://github.com/bxmny/my-homepage" target="_blank">github.com/bxmny/my-homepage</a></p>
+                </article>
+
+                <!-- 项目 2 -->
+                <article class="project-card">
+                    <h2>02 · 学生成绩统计系统（C 语言）</h2>
+                    <div class="meta">
+                        <span class="tag">C 语言</span>
+                        <span class="tag">数组</span>
+                        <span class="tag">课程练习</span>
+                    </div>
+
+                    <h4>解决什么问题</h4>
+                    <p>
+                        老师布置的练习：用数组存 10 个同学的成绩，输入后计算平均分、最高分、最低分，
+                        并尝试用冒泡排序输出。
+                    </p>
+
+                    <h4>我负责什么</h4>
+                    <ul>
+                        <li>独立完成全部代码，包括数组遍历、条件判断和排序算法；</li>
+                        <li>自己设计测试数据，排查越界错误；</li>
+                        <li>记录并整理调试过程中遇到的 bug。</li>
+                    </ul>
+
+                    <h4>用了什么技术</h4>
+                    <ul>
+                        <li><strong>C 语言：</strong>一维数组、for 循环、if 条件判断；</li>
+                        <li><strong>调试：</strong>用 <code>printf</code> 打印循环变量来定位问题。</li>
+                    </ul>
+
+                    <h4>最大的困难</h4>
+                    <p>
+                        最大的困难是<strong>数组越界导致的乱码</strong>。程序一运行，平均分结果就是一堆乱码或者极大的负数。
+                        我一开始乱改了半小时都没用，后来用 <code>printf</code> 一步步看，
+                        发现循环条件写成了 <code>i &lt;= 10</code>。数组长度是 10，下标应该是 0 到 9，
+                        越界访问到了未知内存。改成 <code>i &lt; 10</code> 之后，结果就完全正确了。
+                        这次经历让我彻底记住了数组下标从 0 开始。
+                    </p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© 2026 冯奥 · 用 HTML / CSS / JavaScript 手工搭建</span>
+            <span><a href="mailto:bxmny99@gmail.com">bxmny99@gmail.com</a></span>
+        </div>
+    </footer>
+
+</body>
+</html>
